@@ -3,9 +3,8 @@
 # Solution:
 
 def secondMin(L):
-    L.sort()
-    return L
+    L = sorted(L)
+    return L[2-1]
 
 n = int(input())
-L = secondMin([int(i) for i in input().split()])
-print(L[2-1])
+print(secondMin([int(i) for i in input().split()]))
