@@ -1,0 +1,18 @@
+# Another Approach Using In Built Sorted Method
+
+# Solution:
+
+def conSeq(L1,L2,n1,n2):
+    L3 = sorted(L1 + L2)
+    counter = 0
+    for i in range(0,(n1+n2)-1):
+        if(L3[i]+1==L3[i+1]):
+            counter += 1
+    return (counter==(n1+n2)-1)
+
+
+n1 = int(input())
+L1 = [int(i) for i in input().split()]
+n2 = int(input())
+L2 = [int(i) for i in input().split()]
+print(str(conSeq(L1,L2,n1,n2)).lower())
